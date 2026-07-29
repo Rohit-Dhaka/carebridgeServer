@@ -8,6 +8,6 @@ import connectDB from './src/config/db.js'
 
 
 connectDB();
-app.listen(config.PORT ,()=>{
-    console.log(`app listen on port ${config.PORT}`)
+app.listen(config.PORT, () =>{
+    console.log(`app listening on port ${config.PORT}`)
 })

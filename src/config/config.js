@@ -1,42 +1,42 @@
-import dotenv from "dotenv";
+import dotenv from 'dotenv'
 dotenv.config();
 
-if (!process.env.PORT) {
-  throw new Error("PORT is not find in env file");
-}
 
-if (!process.env.SECRET_KEY) {
-  throw new Error("SECRET_KEY is not find in env file");
+if(!process.env.PORT){
+    throw new Error("PORT is not defined in env file");    
 }
-
-if (!process.env.MONGO_URL) {
-  throw new Error("MONGO_URL is not find in env file");
+if(!process.env.MONGO_URL){
+    throw new Error("MONGO_URL is not defined in env file");    
 }
-
-if (!process.env.GOOGLE_CLIENT_ID) {
-  throw new Error("GOOGLE_CLIENT_ID is not find in env file");
+if(!process.env.SECRET_KEY){
+    throw new Error("SECRET_KEY is not defined in env file");    
 }
-
-if (!process.env.GOOGLE_CLIENT_SECRET) {
-  throw new Error("GOOGLE_CLIENT_SECRET is not find in env file");
+if(!process.env.EMAIL_USER){
+    throw new Error("EMAIL_USER is not defined in env file");    
 }
-
-if (!process.env.GOOGLE_REFRESH_TOKEN) {
-  throw new Error("GOOGLE_REFRESH_TOKEN is not find in env file");
+if(!process.env.EMAIL_PASS){
+    throw new Error("EMAIL_PASS is not defined in env file");    
 }
-
-if (!process.env.GOOGLE_USER) {
-  throw new Error("GOOGLE_USER is not find in env file");
+if(!process.env.CLOUD_NAME){
+    throw new Error("CLOUND_NAME is not defined in env file");    
+}
+if(!process.env.API_KEY){
+    throw new Error("API_KEY is not defined in env file");    
+}
+if(!process.env.API_SECRET){
+    throw new Error("API_SECRET is not defined in env file");    
 }
 
 const config = {
-  PORT: process.env.PORT,
-  MONGO_URL: process.env.MONGO_URL,
-  SECRET_KEY: process.env.SECRET_KEY,
-  GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
-  GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
-  GOOGLE_REFRESH_TOKEN: process.env.GOOGLE_REFRESH_TOKEN,
-  GOOGLE_USER: process.env.GOOGLE_USER,
-};
+PORT: process.env.PORT,
+MONGO_URL: process.env.MONGO_URL,
+SECRET_KEY: process.env.SECRET_KEY,
+EMAIL_USER: process.env.EMAIL_USER,
+EMAIL_PASS: process.env.EMAIL_PASS,
+CLOUD_NAME: process.env.CLOUD_NAME,
+API_KEY: process.env.API_KEY,
+API_SECRET: process.env.API_SECRET,
+}
+
 
 export default config;
