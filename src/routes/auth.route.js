@@ -27,6 +27,7 @@ authRouter.delete('/avatar', authMiddlewares,   authController.deleteAvatar)
 authRouter.delete('/account', authMiddlewares , authController.deleteAccount)
 authRouter.patch('/account/deactivate', authMiddlewares, authController.deactivateAccount)
 authRouter.patch('/account/reactivate', authMiddlewares , authController.reactivateAccount)
+// authRouter.patch('/account/reactivate', authMiddlewares , authController.reactivateAccount)
 
 
 export default authRouter
