@@ -1,5 +1,5 @@
 import { Router } from "express";
-import * as authController from '../controllers/auth.Controller.js'
+import * as authController from '../controllers/auth.controller.js'
 import authMiddlewares from "../middlewares/auth.middlewares.js";
 import upload from "../middlewares/uplode.middlewares.js";
 const authRouter = Router()
@@ -27,7 +27,7 @@ authRouter.delete('/avatar', authMiddlewares,   authController.deleteAvatar)
 authRouter.delete('/account', authMiddlewares , authController.deleteAccount)
 authRouter.patch('/account/deactivate', authMiddlewares, authController.deactivateAccount)
 authRouter.patch('/account/reactivate', authMiddlewares , authController.reactivateAccount)
-// authRouter.patch('/account/reactivate', authMiddlewares , authController.reactivateAccount)
+
 
 
 export default authRouter
